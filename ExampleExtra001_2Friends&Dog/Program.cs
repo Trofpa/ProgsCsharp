@@ -6,24 +6,30 @@
 
 Автор: Трофимов П.А. */
 
-double time = 0;
+double time = 0; // Инициализируем переменные на входе программы
 int FirstFrSpeed = 1;
 int SecondFrSpeed = 2;
 int DogSpeed = 5;
-int friend = 2;
+int friend = 0;
 int count = 0;
 double distance = 0;
 
-bool condition = true;
+bool condition = true; // булевая переменная, определяющая продолжение работы программы
 
 while (condition)
 {
+    
+/*
+В этом блоке чистим консоль, запрашиваем расстояние между друзьями и от какого друга собака начинает.
+*/
     Console.Clear();
     count = 0;
     Console.Write("Введите, пожалуйста, расстояние между друзьями, в метрах: ");
-    distance = Convert.ToDouble(Console.ReadLine());
-
-    while (distance > 10)
+    distance = Convert.ToDouble(Console.ReadLine()); // 
+    Console.Write("Введите, пожалуйста, от какого друга начинает собака?: ");
+    friend = Convert.ToInt32(Console.ReadLine());
+// Далее цикл на бег собаки. Считаем, что друзья встретились, если расстояние между ними <=10
+    while (distance > 10) /
     {
         if (friend == 1)
         {
@@ -40,8 +46,10 @@ while (condition)
         count++;
     }
 
+/*
+Далее блок кода для учета склонения при выдаче фразы - результата решения задачи.
+*/
     int rest = count % 10;
-
     if (((rest == 2)&&(count != 12))||((rest == 3)&&(count != 13))||((rest == 4)&&(count != 14)))
     {
         Console.WriteLine("Собака пробежит " + count + " раза!");
@@ -50,6 +58,10 @@ while (condition)
     {
         Console.WriteLine("Собака пробежит " + count + " раз!");    
     }
+   
+    /*
+Далее запрашивается запрос на повторное решение задачи с другими условиями или завершение работы
+    */
     Console.WriteLine("Нажмите любую клавишу, чтобы начать заново!\nЧтобы закончить, нажмите Esc"); 
     var btn = Console.ReadKey(true);
     if (btn.Key == ConsoleKey.Escape)
