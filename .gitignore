@@ -398,7 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # drawio schemes and images
-*.png
+# *.png
 
 # markdown files
 # *.md
