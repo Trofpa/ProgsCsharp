@@ -4,7 +4,7 @@
 
 Console.WriteLine("Введите число");
 
-int Number = Convert.ToInt16(Console.ReadLine());
+int Number = int.Parse(Console.ReadLine());
 
 if (Number % 2 == 0)
 {
