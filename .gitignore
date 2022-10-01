@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # drawio schemes and images
 *.png
+
+# markdown files
+*.md
