@@ -10,11 +10,11 @@ Console.Clear();
 int FirstNumber;
 int SecondNumber;
 Console.WriteLine("Введите первое число: "); // Вводим числа
-int.TryParse(Console.ReadLine(), out FirstNumber);
+bool Condition1 = int.TryParse(Console.ReadLine(), out FirstNumber);
 Console.WriteLine("Введите второе число: ");
-int.TryParse(Console.ReadLine(), out SecondNumber);
+bool Condition2 = int.TryParse(Console.ReadLine(), out SecondNumber);
 
-if ((i != 0)&& (j != 0)) // Проверка на то, что были введены числа
+if (Condition1 && Condition2) // Проверка на то, что были введены числа
 {
     if(FirstNumber > SecondNumber) // Сравниваем введенные числа
     {
@@ -34,5 +34,5 @@ if ((i != 0)&& (j != 0)) // Проверка на то, что были введ
 }
 else
 {
-    Console.WriteLine("Одно или оба значения не являлись числом!");
+    Console.WriteLine("Одно или оба введенных символа не являлись числом!");
 }
