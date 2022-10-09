@@ -43,6 +43,7 @@ int[] HowManyTimes(int[] array)
     {
         if (array[i] > max) max = array[i];
     }
+    
     int[] AddArray = new int[max + 1];
     for (int i = 0; i < AddArray.Length; i++)
     {
