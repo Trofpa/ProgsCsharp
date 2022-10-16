@@ -140,19 +140,35 @@ for (int i = 1; i < 40; i++)
 //ФИБОНАЧЧИ
 
 //f(1) = 1; f(2) = 1; f(n) = f(n-1) + f(n-2)
-/*
+
 int Fibonacci(int n)
 {
-    if(n == 1 | n == 2) return 1;
+    if (n == 1 | n == 2) return 1;
     else return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
+double current = 1;// Добавлено кэширование чтобы ускорить счет
+double cash1 = 1;
+double cash2 = 1;
 for (int i = 1; i < 50; i++)
 {
-    Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+
+    if (i == 1 | i == 2)
+    {
+        current = Fibonacci(i);
+        cash1 = 1;
+        cash2 = 1;
+    }
+    else
+    {
+        current = cash1 + cash2;
+        cash2 = cash1;
+        cash1 = current;
+    }
+    Console.WriteLine($"f({i}) = {current}");
 }
 
-*/
+
 
 //ОБХОДИМ ДИРЕКТОРИЮ - на семинаре?
 
