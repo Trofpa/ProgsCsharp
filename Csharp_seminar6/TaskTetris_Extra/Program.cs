@@ -49,7 +49,7 @@ void FigurePrint(string[,] block, int x = 0, int y = 0)
 
 
 int x = 10;
-int y = 6;
+int y = 2;
 string[,] block =
 {
   {"+", "+", "+","+"," "},
