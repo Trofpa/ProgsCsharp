@@ -17,7 +17,7 @@ using System.Linq;
 int find_it(int[] seq) 
 {
     int count = 0;
-    for (int k = 0; k <= seq.Max(); k++)
+    for (int k = seq.Min(); k <= seq.Max(); k++)
     {
         for (int i = 0; i < seq.GetLength(0); i++)
         {
@@ -36,7 +36,7 @@ return -1;
 
 Console.Clear();
 
-int[] array = {20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2};
+int[] array = {1,2,2,3,3,3,4,3,3,3,2,2,1,4,-20};
 
 Console.WriteLine("[{0}]", string.Join(",", array));
 
